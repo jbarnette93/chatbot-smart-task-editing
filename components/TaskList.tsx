@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { Task } from '@/types/task';
 import { getTasks } from '@/app/actions/tasks';
 import TaskItem from './TaskItem';
@@ -14,7 +14,7 @@ export default function TaskList({ userEmail }: TaskListProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchTasks = async () => {
+  const fetchTasks = useCallback(async () => {
     setIsLoading(true);
     setError(null);
 
@@ -31,11 +31,11 @@ export default function TaskList({ userEmail }: TaskListProps) {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [userEmail]);
 
   useEffect(() => {
     fetchTasks();
-  }, [userEmail]);
+  }, [fetchTasks]);
 
   if (isLoading) {
     return (

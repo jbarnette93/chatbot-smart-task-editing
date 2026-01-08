@@ -41,7 +41,7 @@ export default function ChatInput({ onSendMessage, isLoading }: ChatInputProps) 
         </button>
       </div>
       <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-        Tip: Include "#to-do" or "#todo" in your message to create a task
+        Tip: Include &quot;#to-do&quot; or &quot;#todo&quot; in your message to create a task
       </p>
     </form>
   );
