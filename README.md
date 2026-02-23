@@ -1,4 +1,4 @@
-# AI Automation Developer Challenge
+# AI Automation - Smart Chatbot Task Editing
 
 A Next.js to-do list application with AI-powered task enhancement and chatbot integration, built for the AI Automation Developer Challenge.
 
