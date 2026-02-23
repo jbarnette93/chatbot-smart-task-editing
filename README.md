@@ -309,23 +309,6 @@ Processes chatbot messages via n8n.
 
 4. **State Management**: React state + server actions for simplicity. No complex state libraries needed.
 
-## Troubleshooting
-
-### Tasks not persisting
-- Verify Supabase credentials in `.env.local`
-- Check Supabase table exists and RLS policies are set
-- Check browser console for errors
-
-### Enhancement not working
-- Verify `N8N_ENHANCE_WEBHOOK_URL` is set
-- Check n8n workflow is activated
-- Verify n8n workflow receives and processes requests correctly
-
-### Chatbot not creating tasks
-- Verify `N8N_CHAT_WEBHOOK_URL` is set
-- Check message contains `#to-do` or `#todo`
-- Verify n8n workflow is activated and connected to Supabase
-
 ## Submission Checklist
 
 - [ ] N8N access details documented (URL, login, password)
